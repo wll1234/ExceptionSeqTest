@@ -54,11 +54,13 @@ public class ExceptionTest {
 	 * @throws Exception
 	 */
 	public void throwsTryFinallyException() throws Exception{
+		System.out.println("throwsTryFinallyException Start");
 		try {
 			int a = 1 / 0;
 		} finally {
 			System.out.println("[throwsTryFinallyException] Finally");
 		}
+		System.out.println("throwsTryFinallyException End");
 	}
 	
 	/**
@@ -66,6 +68,7 @@ public class ExceptionTest {
 	 * @throws Exception
 	 */
 	public void throwsTryCatchFinallyException() throws Exception{
+		System.out.println("throwsTryCatchFinallyException Start");
 		try {
 			int a = 1 / 0;
 		} catch (Exception e) {
@@ -74,5 +77,6 @@ public class ExceptionTest {
 		} finally {
 			System.out.println("[throwsTryCatchFinallyException] Finally");
 		}
+		System.out.println("throwsTryCatchFinallyException End");
 	}
 }
